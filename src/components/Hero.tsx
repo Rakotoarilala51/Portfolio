@@ -79,12 +79,15 @@ const loopJobs = (index: number) => {
       className="h-screen flex items-center justify-center relative bg-gradient-hero overflow-hidden"
     >
       {/* Background */}
-      <div
-        ref={backgroundRef}
-        className="absolute top-0 left-0 w-full h-full bg-cover bg-center opacity-80 z-[1]"
-        style={{ backgroundImage: "url('/assets/images/hero_background.png')" }}
-      />
-
+<div className="absolute top-0 left-0 w-full h-full z-[1]">
+  <Image
+    src="/assets/images/hero_background.png"
+    alt="Background"
+    fill
+    style={{ objectFit: "cover", opacity: 0.8 }}
+    priority
+  />
+</div>
       {/* Contenu centré verticalement */}
       <div className="flex flex-col items-center text-center z-[2] relative">
         {/* Image centrée */}
