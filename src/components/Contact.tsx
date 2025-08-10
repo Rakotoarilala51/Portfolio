@@ -23,6 +23,8 @@ export default function Contact() {
 
     if (data.success) {
       setResult("Form Submitted Successfully");
+      setIsSubmitted(true)
+      setIsSubmitting(true)
       event.currentTarget.reset();
     } else {
       console.log("Error", data);

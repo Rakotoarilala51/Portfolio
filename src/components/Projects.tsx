@@ -5,7 +5,7 @@ import {
   SiNextdotjs, SiReact, SiTypescript, SiFastapi, SiLangchain, SiSpring, 
   SiRust, SiGo, SiPython, SiJavascript, SiGithub
 } from 'react-icons/si'
-import { FaExternalLinkAlt, FaBrain, FaNewspaper, FaRobot, FaTasks, 
+import { FaExternalLinkAlt, FaRobot,
   FaGraduationCap, FaTerminal, FaShieldAlt, FaCode, FaServer } from 'react-icons/fa'
 
 interface ProjectCardProps {
@@ -135,7 +135,7 @@ export default function Projects() {
       technologies: [
         { name: 'Next.js', icon: <SiNextdotjs /> },
         { name: 'FastAPI', icon: <SiFastapi /> },
-        { name: 'LangChain', icon: <FaBrain /> },
+        { name: 'LangChain', icon: <SiLangchain /> },
         { name: 'TypeScript', icon: <SiTypescript /> }
       ],
       github: 'https://github.com/Rakotoarilala51/TalentLens',
@@ -150,7 +150,7 @@ export default function Projects() {
       technologies: [
         { name: 'Next.js', icon: <SiNextdotjs /> },
         { name: 'FastAPI', icon: <SiFastapi /> },
-        { name: 'LangChain', icon: <FaBrain /> },
+        { name: 'LangChain', icon: <SiLangchain /> },
         { name: 'Python', icon: <SiPython /> }
       ],
       github: 'https://github.com/Rakotoarilala51/TrustMeBro',

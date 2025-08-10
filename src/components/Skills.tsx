@@ -5,10 +5,10 @@ import {
   SiReact, SiNextdotjs, SiVuedotjs, SiHtml5, SiCss3, SiTailwindcss,
   SiNodedotjs, SiSpring, SiFastapi, SiDjango, SiLaravel, SiNestjs,
   SiLangchain, SiScikitlearn, SiTensorflow, SiPytorch,
-  SiGit, SiDocker, SiFigma, SiKubernetes,
+  SiGit, SiDocker, SiFigma,
   SiPostgresql, SiMysql, SiOracle, SiMongodb, SiRedis, SiJupyter
 } from 'react-icons/si'
-import { FaDatabase, FaCode, FaJava } from 'react-icons/fa'
+import { FaDatabase, FaJava } from 'react-icons/fa'
 
 interface SkillItemProps {
   name: string

@@ -26,7 +26,7 @@ export default function Hero() {
     type();
   };
   const typeRemover = (element: HTMLElement, speed = 100) => {
-    let txt: string = element.textContent;
+    const txt: string = element.textContent;
     let i = txt.length;
     const erase = () => {
       if (i >= 0) {
