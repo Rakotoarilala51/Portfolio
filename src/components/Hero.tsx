@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-
+import Image from "next/image";
 export default function Hero() {
   const titleRef = useRef<HTMLSpanElement>(null);
   const backgroundRef = useRef<HTMLDivElement>(null);
@@ -42,21 +42,20 @@ export default function Hero() {
     const erasingSpeed = 100;
 
     typeWriter(subtitleRef.current, myJobs[index], typingSpeed);
-    setTimeout(()=>{
+    setTimeout(() => {
       typeRemover(subtitleRef.current, erasingSpeed);
-      setTimeout(()=>{
+      setTimeout(() => {
         loopJobs((index + 1) % myJobs.length);
-      }, myJobs[index].length * erasingSpeed+500)
-    }, myJobs[index].length*typingSpeed+1000)
-    
-    
+      }, myJobs[index].length * erasingSpeed + 500);
+    }, myJobs[index].length * typingSpeed + 1000);
   };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (titleRef.current) {
       const originalText = titleRef.current.getAttribute("data-text") || "";
       typeWriter(titleRef.current, originalText, 150);
     }
-    loopJobs(0)
+    loopJobs(0);
     const handleScroll = () => {
       const scrolled = window.pageYOffset;
       if (backgroundRef.current) {
@@ -86,10 +85,12 @@ export default function Hero() {
       <div className="flex flex-col items-center text-center z-[2] relative">
         {/* Image centrée */}
         <div className="mb-8">
-          <img
+          <Image
             src="/assets/images/developer_avatar.png"
             alt="Developer Avatar"
-            className="w-[200px] h-[200px] rounded-full border-[3px] border-neon-cyan shadow-avatar animate-float"
+            width={200}
+            height={200}
+            className="rounded-full border-[3px] border-neon-cyan shadow-avatar animate-float"
           />
         </div>
 
@@ -109,9 +110,7 @@ export default function Hero() {
         <span
           ref={subtitleRef}
           className="text-2xl text-neon-cyan mb-2 drop-shadow-[0_0_10px_#00FFFF] h-6"
-        >
-        
-        </span>
+        ></span>
 
         <p className="text-xl text-white mb-8 opacity-80">
           Coding the Future with Retro Style

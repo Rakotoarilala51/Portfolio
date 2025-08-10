@@ -40,10 +40,10 @@ export default function Contact() {
           </span>
         </h2>
             <h3 className="text-center font-orbitron text-3xl text-neon-cyan mb-1 drop-shadow-[0_0_10px_#00FFFF]">
-              Let's Build Something Amazing
+              Let&apos;s Build Something Amazing
             </h3>
             <p className="opacity-90 text-center max-w-2xl mx-auto">
-              Ready to bring your ideas to life? Let's connect and create
+              Ready to bring your ideas to life? Let&apos;s connect and create
               something extraordinary together.
             </p>
 
