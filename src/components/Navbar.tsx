@@ -5,12 +5,18 @@ import { RxCross1 } from "react-icons/rx";
 
 export default function Navbar() {
   const sideMenuRef = useRef<HTMLUListElement>(null);
-  const openMenu = () => {
+const openMenu = () => {
+  if (sideMenuRef.current) {
     sideMenuRef.current.style.transform = "translateX(-16rem)";
-  };
-  const closeMenu = () => {
+  }
+};
+
+const closeMenu = () => {
+  if (sideMenuRef.current) {
     sideMenuRef.current.style.transform = "translateX(16rem)";
-  };
+  }
+};
+
   return (
     <>
       <nav className="fixed top-0 w-full bg-[rgba(10,10,35,0.9)] backdrop-blur-[10px] z-[1000] px-5 lg:px-8 xl:px-[8%] py-4 border-b border-neon-cyan flex items-center justify-between">
