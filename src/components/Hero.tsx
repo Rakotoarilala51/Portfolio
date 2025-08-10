@@ -37,18 +37,22 @@ export default function Hero() {
     };
     erase();
   };
-  const loopJobs = (index: number) => {
-    const typingSpeed = 100;
-    const erasingSpeed = 100;
+const loopJobs = (index: number) => {
+  const typingSpeed = 100;
+  const erasingSpeed = 100;
 
-    typeWriter(subtitleRef.current, myJobs[index], typingSpeed);
+  const el = subtitleRef.current;
+  if (!el) return;
+
+  typeWriter(el, myJobs[index], typingSpeed);
+  setTimeout(() => {
+    typeRemover(el, erasingSpeed);
     setTimeout(() => {
-      typeRemover(subtitleRef.current, erasingSpeed);
-      setTimeout(() => {
-        loopJobs((index + 1) % myJobs.length);
-      }, myJobs[index].length * erasingSpeed + 500);
-    }, myJobs[index].length * typingSpeed + 1000);
-  };
+      loopJobs((index + 1) % myJobs.length);
+    }, myJobs[index].length * erasingSpeed + 500);
+  }, myJobs[index].length * typingSpeed + 1000);
+};
+
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (titleRef.current) {
