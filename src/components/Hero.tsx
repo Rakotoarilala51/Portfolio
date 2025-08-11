@@ -126,7 +126,7 @@ const loopJobs = (index: number) => {
         {/* Boutons */}
         <div className="flex gap-4 justify-center flex-wrap">
           <a
-            href="/lm-aina.docx"
+            href="/cv_ramaitre.pdf"
             download
             className="inline-block py-3 px-8 bg-gradient-btn text-white no-underline border-none rounded-md 
               font-orbitron font-bold uppercase transition-all duration-300 shadow-neon-pink cursor-pointer bg-pink-500
